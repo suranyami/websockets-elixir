@@ -1,4 +1,10 @@
-# WebsocketsElixir
+Websockets Elixir
+=================
+
+Example websocket chat in Elixir
+
+Setup
+=====
 
 To start your new Phoenix application you have to:
 

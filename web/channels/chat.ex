@@ -7,12 +7,14 @@ defmodule WebsocketsElixir.Chat do
     {:ok, socket}
   end
 
-  def event(socket, "chat:message", message) do
-    broadcast "chat", "global", "chat:message", %{message: message}
-    socket
-  end
-
   def join(socket, _private_topic, _message) do
     {:error, socket, :unauthorized}
+  end
+
+  def event(socket, "message", message) do
+    IO.puts "message: #{socket.channel}:#{socket.topic}"
+    IO.puts message["data"]
+    broadcast "chat", "chat", "message", message["data"]
+    socket
   end
 end

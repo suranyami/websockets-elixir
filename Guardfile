@@ -6,3 +6,5 @@ guard :elixir do
   watch(%r{^lib/(.+)\.ex$})           {|m| "test/doc_test.exs"}
   watch(%r{^test/test_helper.exs$})   {"test"}
 end
+
+guard 'coffeescript', input: 'priv/static/js', output: 'priv/static/js'

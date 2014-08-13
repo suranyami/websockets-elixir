@@ -1,0 +1,21 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta(content="IE=edge" http-equiv=X-UA-Compatible")
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+    %meta{content: "", name: "description"}
+    %meta{content: "", name: "author"}
+    %title Hello Phoenix!
+    %link{href: "/css/app.css", rel: "stylesheet"}
+  %body
+    .container
+      .header
+        %ul.nav.nav-pills.pull-right
+          %li
+            %a{href: "https://github.com/phoenixframework/phoenix"} Get Started
+        %span.logo
+      = @inner
+      .footer
+        %p
+          %a{href: "http://phoenixframework.org"} phoenixframework.org

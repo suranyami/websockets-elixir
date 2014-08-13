@@ -1,0 +1,10 @@
+%{"calliope": {:package, "0.2.5"},
+  "cowboy": {:package, "1.0.0"},
+  "cowlib": {:package, "1.0.0"},
+  "inflex": {:package, "0.2.4"},
+  "jazz": {:package, "0.2.0"},
+  "linguist": {:package, "0.1.1"},
+  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "9983b9cba940428fe5e7181b2e299f3d1d2a4a2e", []},
+  "phoenix_haml": {:package, "0.0.3"},
+  "plug": {:package, "0.5.3"},
+  "ranch": {:package, "1.0.0"}}

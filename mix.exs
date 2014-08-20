@@ -6,6 +6,7 @@ defmodule WebsocketsElixir.Mixfile do
       version: "0.0.1",
       elixir: "~> 0.15.0",
       elixirc_paths: ["lib", "web"],
+      escript: escript_config,
       deps: deps ]
   end
 
@@ -28,5 +29,9 @@ defmodule WebsocketsElixir.Mixfile do
       {:phoenix_haml, "~> 0.0.3"},
       {:cowboy, "~> 1.0.0"}
     ]
+  end
+
+  defp escript_config do
+    [main_module: Issues.CLI]
   end
 end

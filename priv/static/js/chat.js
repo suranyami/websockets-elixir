@@ -13,7 +13,8 @@
           var message;
           message = $input.val();
           chan.send("message", {
-            data: message
+            text: message,
+            banana: "xyz"
           });
           $input.val("");
           return console.log("sent message:", message);
@@ -23,7 +24,7 @@
           return $output.append($("<p>").text(message.status));
         });
         return chan.on("message", function(message) {
-          $output.append($("<p>").text(message));
+          $output.append($("<p>").text(message.text));
           return console.log("received message:", message);
         });
       };

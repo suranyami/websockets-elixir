@@ -10,7 +10,8 @@ $ ->
     $input.change (event) =>
       message = $input.val()
       chan.send "message",
-        data: message
+        text: message
+        banana: "xyz"
       $input.val ""
       console.log "sent message:", message
 
@@ -19,5 +20,5 @@ $ ->
       $output.append $("<p>").text(message.status)
 
     chan.on "message", (message) =>
-      $output.append($("<p>").text(message))
+      $output.append($("<p>").text(message.text))
       console.log "received message:", message

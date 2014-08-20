@@ -1,3 +1,5 @@
+require IEx
+
 defmodule WebsocketsElixir.Chat do
   use Phoenix.Channel
 
@@ -12,9 +14,8 @@ defmodule WebsocketsElixir.Chat do
   end
 
   def event(socket, "message", message) do
-    IO.puts "message: #{socket.channel}:#{socket.topic}"
-    IO.puts message["data"]
-    broadcast "chat", "chat", "message", message["data"]
+    IO.puts message["text"]
+    broadcast "chat", "chat", "message", message
     socket
   end
 end

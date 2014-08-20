@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :phoenix, WebsocketsElixir.Router,
-  port: System.get_env("PORT"),
+  port: System.get_env("PORT") || 80,
   ssl: false,
   code_reload: false,
   cookies: true,
@@ -10,4 +10,3 @@ config :phoenix, WebsocketsElixir.Router,
 
 config :phoenix, :logger,
   level: :error
-
